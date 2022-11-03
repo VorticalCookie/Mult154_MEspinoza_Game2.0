@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3e10e9a9fd0037c40bde765de64bab81
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bullet: {instanceID: 0}
+  - fpsCam: {instanceID: 0}
+  - attackPoint: {instanceID: 0}
+  - muzzleFlash: {instanceID: 0}
+  - ammunitionDisplay: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
