@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 3e10e9a9fd0037c40bde765de64bab81
+guid: c91d91cc708fa0744a798103e7a74228
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - bullet: {instanceID: 0}
-  - fpsCam: {instanceID: 0}
-  - attackPoint: {instanceID: 0}
-  - muzzleFlash: {instanceID: 0}
-  - ammunitionDisplay: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

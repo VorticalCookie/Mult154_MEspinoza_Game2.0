@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 using TMPro;
 
@@ -16,7 +15,6 @@ public class ProjectileGunTutorial : MonoBehaviour
     //bullet 
     public GameObject bullet;
 
-    //GameObject currentBullet = bullet;
     //bullet force
     public float shootForce, upwardForce;
 
@@ -28,8 +26,8 @@ public class ProjectileGunTutorial : MonoBehaviour
     int bulletsLeft, bulletsShot;
 
     //Recoil
-    //public Rigidbody playerRb;
-    public float recoilForce;
+   // public Rigidbody playerRb;
+   // public float recoilForce;
 
     //bools
     bool shooting, readyToShoot, reloading;
@@ -39,35 +37,32 @@ public class ProjectileGunTutorial : MonoBehaviour
     public Transform attackPoint;
 
     //Graphics
-    public GameObject muzzleFlash;
-    public TextMeshProUGUI ammunitionDisplay;
+   // public GameObject muzzleFlash;
+   // public TextMeshProUGUI ammunitionDisplay;
 
     //bug fixing :D
     public bool allowInvoke = true;
 
-  
     private void Awake()
     {
         //make sure magazine is full
         bulletsLeft = magazineSize;
         readyToShoot = true;
-
-}
+    }
 
     private void Update()
     {
         MyInput();
 
         //Set ammo display, if it exists :D
-        if (ammunitionDisplay != null)
-            ammunitionDisplay.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
+     //   if (ammunitionDisplay != null)
+      //      ammunitionDisplay.SetText(bulletsLeft / bulletsPerTap + " / " + magazineSize / bulletsPerTap);
     }
     private void MyInput()
     {
         //Check if allowed to hold down button and take corresponding input
-        if (allowButtonHold) shooting = Input.GetKey(KeyCode.E);
+        if (allowButtonHold) shooting = Input.GetKeyDown(KeyCode.E);
         else shooting = Input.GetKeyDown(KeyCode.E);
-       
 
         //Reloading 
         if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
@@ -111,7 +106,6 @@ public class ProjectileGunTutorial : MonoBehaviour
 
         //Instantiate bullet/projectile
         GameObject currentBullet = Instantiate(bullet, attackPoint.position, Quaternion.identity); //store instantiated bullet in currentBullet
-        Debug.Log("Sword attack!");
         //Rotate bullet to shoot direction
         currentBullet.transform.forward = directionWithSpread.normalized;
 
@@ -120,8 +114,8 @@ public class ProjectileGunTutorial : MonoBehaviour
         currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * upwardForce, ForceMode.Impulse);
 
         //Instantiate muzzle flash, if you have one
-        if (muzzleFlash != null)
-            Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+     //   if (muzzleFlash != null)
+      //      Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
 
         bulletsLeft--;
         bulletsShot++;
@@ -133,7 +127,7 @@ public class ProjectileGunTutorial : MonoBehaviour
             allowInvoke = false;
 
             //Add recoil to player (should only be called once)
-            //playerRb.AddForce(-directionWithSpread.normalized * recoilForce, ForceMode.Impulse);
+      //      playerRb.AddForce(-directionWithSpread.normalized * recoilForce, ForceMode.Impulse);
         }
 
         //if more than one bulletsPerTap make sure to repeat shoot function

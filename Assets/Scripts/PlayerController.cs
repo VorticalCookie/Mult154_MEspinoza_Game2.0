@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +9,13 @@ public class PlayerController : MonoBehaviour
 
     public UnityEngine.AI.NavMeshAgent agent;
 
+    public ThirdPersonCharacter character;
+
+    //Animator animator;
+    private void Start()
+    {
+        agent.updateRotation = false;
+    }
     void Update ()
     {
         if (Input.GetMouseButtonDown(0))
@@ -17,8 +25,19 @@ public class PlayerController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
+          
                 agent.SetDestination(hit.point);
             }
         }
+     
+
+            if (agent.remainingDistance > agent.stoppingDistance)
+        {
+            character.Move(agent.desiredVelocity, false, false);
+        } else
+        {
+            character.Move(Vector3.zero, false, false);
+        }
+        
     }
 }
