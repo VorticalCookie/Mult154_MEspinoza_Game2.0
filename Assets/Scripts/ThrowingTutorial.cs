@@ -23,9 +23,6 @@ public class ThrowingTutorial : MonoBehaviour
 
     private void Start()
     {
-
-        //objectToThrow = GameObject.Find("SwordBullet");
-
         readyToThrow = true;
     }
 

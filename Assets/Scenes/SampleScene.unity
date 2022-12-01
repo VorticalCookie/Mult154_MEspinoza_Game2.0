@@ -5641,33 +5641,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783664020}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &793797135 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2066896392038628118, guid: 45288819fde2143449a96207b14db0bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 88212449}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &793797136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793797135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 394461988791aba44af9db7c021a6f4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 944704051}
-  attackPoint: {fileID: 400887925}
-  objectToThrow: {fileID: 6531124673975121954, guid: e74da73fc21bd4e49b4952dd3b0e12b5,
-    type: 3}
-  totalThrows: 10000
-  throwCooldown: 1
-  throwKey: 101
-  throwForce: -7
-  throwUpwardForce: 0
 --- !u!1 &809907262
 GameObject:
   m_ObjectHideFlags: 0
@@ -10194,6 +10167,7 @@ GameObject:
   - component: {fileID: 1396175368}
   - component: {fileID: 1396175367}
   - component: {fileID: 1396175372}
+  - component: {fileID: 1396175373}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -10339,6 +10313,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce2b2d798cdc704ab8eaad6e0072a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1396175373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396175359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 394461988791aba44af9db7c021a6f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 944704051}
+  attackPoint: {fileID: 400887925}
+  objectToThrow: {fileID: 6531124673975121954, guid: 40f0bacc22d10de479d03f2c1f274bc7,
+    type: 3}
+  totalThrows: 100
+  throwCooldown: 1
+  throwKey: 101
+  throwForce: -8
+  throwUpwardForce: 1
 --- !u!1 &1415383622
 GameObject:
   m_ObjectHideFlags: 0
