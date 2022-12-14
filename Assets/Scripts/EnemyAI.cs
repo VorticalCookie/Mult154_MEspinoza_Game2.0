@@ -95,7 +95,15 @@ public class EnemyAI : MonoBehaviour
             
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
 
+
+        if (collision.collider.CompareTag("Bullet"))
+        {
+            Destroy(gameObject);
+        }
+    }
     private void ResetAttack()
     {
         alreadyAttacked = false;

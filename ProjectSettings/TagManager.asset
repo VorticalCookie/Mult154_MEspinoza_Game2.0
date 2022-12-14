@@ -8,6 +8,8 @@ TagManager:
   - Teleporter
   - Bullet
   - Enemy
+  - Evil
+  - Projectile
   layers:
   - Default
   - TransparentFX
